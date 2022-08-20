@@ -2,7 +2,13 @@ pipeline {
     agent any
 
     stages {
-        // build dockerfile
+        stage('prep') {
+            steps {
+                git url="https://github.com/waleedKotyb/Dockerizing-a-NodeJS-web-app.git" , branch="main"
+            }
+        }
+        
+        
         stage('build') {
             steps {
                 sh "docker build . -f Dockerfile -t jconnect/nodeapp:v1"
