@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('prep') {
             steps {
-                git url="https://github.com/waleedKotyb/Dockerizing-a-NodeJS-web-app.git" , branch="main"
+                git "https://github.com/waleedKotyb/Dockerizing-a-NodeJS-web-app.git"
             }
         }
         
