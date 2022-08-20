@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        // clone from github
-        stage('prep') {
-            steps {
-                git "https://github.com/waleedKotyb/Dockerizing-a-NodeJS-web-app.git"
-            }
-        }
         // build dockerfile
         stage('build') {
             steps {
