@@ -29,8 +29,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                    sh "docker kill \$(docker ps -q)"
-                    sh "docker run -d -p 9999:8080 jconnect/nodeapp:v1"
+                    sh "docker run -d -p 5050:8080 jconnect/nodeapp:v1"
              
             }
         }
